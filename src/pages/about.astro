@@ -1,0 +1,17 @@
+---
+import About from '~/components/widgets/About.astro';
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
+
+
+const meta = {
+	title: SITE.title,
+	description: SITE.description,
+	canonical: getCanonical(getHomePermalink()),
+};
+---
+
+<Layout {meta}>
+	<About />
+</Layout>
