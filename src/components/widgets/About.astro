@@ -14,24 +14,26 @@ import { getPermalink } from '~/utils/permalinks';
 					<span class="sm:whitespace-nowrap">Tony Mackenzie</span>
 				</h1>
 				<div class="max-w-3xl mx-auto">
-                    <div class="flex gap-8 mb-8">
-					<p class="text-xl text-gray-600 mb-8 dark:text-slate-400 my-auto">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta est distinctio nisi porro! Necessitatibus atque, sequi, magnam ea alias magni error commodi laboriosam voluptatibus a non repellendus odio! Quia?
-					</p>
-                    <div class="relative m-auto max-w-xs">
-					<Picture
-						src={import('~/assets/images/profilepic.jpg')}
-						class="mx-auto rounded-full w-full"
-						widths={[100, 300, 500]}
-						sizes="(max-width: 500px) 100vw, 800px"
-						alt="Portrait"
-						aspectRatio={1 / 1}
-						loading="eager"
-						width={20}
-						height={20}
-					/>
-                    </div>
-				</div>
+					<div class="sm:flex gap-8 mb-8">
+						<p class="text-xl text-gray-600 mb-8 dark:text-slate-400 my-auto">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dicta est distinctio nisi porro!
+							Necessitatibus atque, sequi, magnam ea alias magni error commodi laboriosam voluptatibus a non repellendus
+							odio! Quia?
+						</p>
+						<div class="relative m-auto max-w-xs">
+							<Picture
+								src={import('~/assets/images/profilepic.jpg')}
+								class="mx-auto rounded-full w-full"
+								widths={[100, 300, 500]}
+								sizes="(max-width: 500px) 100vw, 800px"
+								alt="Portrait"
+								aspectRatio={1 / 1}
+								loading="eager"
+								width={20}
+								height={20}
+							/>
+						</div>
+					</div>
 					<div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
 						<div class="flex w-full sm:w-auto">
 							<a
@@ -43,12 +45,10 @@ import { getPermalink } from '~/utils/permalinks';
 								<Icon name="tabler:mail" class="w-5 h-5 mr-1 -ml-1.5" /> Contact Us
 							</a>
 						</div>
-
 					</div>
 				</div>
 			</div>
-			<div>
-			</div>
+			<div></div>
 		</div>
 	</div>
 </section>
