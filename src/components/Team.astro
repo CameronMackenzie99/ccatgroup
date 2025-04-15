@@ -8,19 +8,30 @@ const team = [
     name: 'Tony Mackenzie',
     role: 'Operations & Compliance',
     image: tony.src,
-    bio: 'Tony’s previous experience as a UK CAA Flight Operations inspector, DFO and COO, is invaluable. He is an expert in identifying potential safety and noncompliance issues. He can identify inefficiencies throughout all functional areas of the flight operation and recommend appropriate changes including best practice processes and procedure changes as required. His track record is proven to save significant cost to an airline operation.',
+    bio: [
+      'Tony’s previous experience as a UK CAA Flight Operations inspector, DFO and COO, is invaluable. He is an expert in identifying potential safety and noncompliance issues.',
+      'He can identify inefficiencies throughout all functional areas of the flight operation and recommend appropriate changes including best practice processes and procedure changes as required. His track record is proven to save significant cost to an airline operation.',
+    ],
   },
   {
     name: 'Gabriel Rusu',
     role: 'Strategy & Finance',
     image: gabriel.src,
-    bio: 'Gabriel takes a leading role in solving financial issues through operational improvements. He drives cultural change. He maintains the team’s focus on increased financial liquidity and profitability implementing incremental efficiencies and better commercial contracts. Throughout his career he has significantly improved inter departmental communication and cooperation.',
+    bio: [
+      'Gabriel takes a leading role in solving financial issues through operational improvements. He drives cultural change.',
+      'He maintains the team’s focus on increased financial liquidity and profitability implementing incremental efficiencies and better commercial contracts.',
+      'Throughout his career he has significantly improved inter departmental communication and cooperation.',
+    ],
   },
   {
     name: 'Remco Althuis',
     role: 'Strategic Advisor',
     image: remco.src,
-    bio: 'Remco is an experienced strategic advisor and aviation expert with over 25 years of leading and guiding organizations through transformation, growth, and operational challenges. He advises boards, investors, and executive teams on business resilience, efficiency, and long-term value creation across complex, regulated industries. Remco brings a global perspective and a collaborative leadership style, shaped by international experience across Europe, Asia, Africa, and the Middle East',
+    bio: [
+      'Remco is an experienced strategic advisor and aviation expert with over 25 years of leading and guiding organizations through transformation, growth, and operational challenges.',
+      'He advises boards, investors, and executive teams on business resilience, efficiency, and long-term value creation across complex, regulated industries.',
+      'Remco brings a global perspective and a collaborative leadership style, shaped by international experience across Europe, Asia, Africa, and the Middle East',
+    ],
   },
 ];
 ---
@@ -55,7 +66,11 @@ const team = [
               <p class='text-xl text-gray-400 font-medium mb-4'>
                 {member.role}
               </p>
-              <p class='text-gray-300 text-lg leading-relaxed'>{member.bio}</p>
+              <div class='flex flex-col text-left gap-2'>
+                {member.bio.map((para) => (
+                  <p class='text-gray-300 text-lg leading-relaxed'>{para}</p>
+                ))}
+              </div>
             </div>
           </div>
         ))
