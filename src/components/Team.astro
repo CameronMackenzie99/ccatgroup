@@ -1,6 +1,7 @@
 ---
 import tony from '../assets/tony.jpg';
 import gabriel from '../assets/gabriel.jpg';
+import remco from '../assets/remco.jpg';
 
 const team = [
   {
@@ -15,6 +16,12 @@ const team = [
     image: gabriel.src,
     bio: 'Inspirational driver for change. Hands on experience Versatile communicator, thriving in multicultural environments, including 14 years in the Middle East, 8 years in Europe and 6 years in North America 16 years of experience at senior management level Wide sectorial background: commercial aviation, infrastructure projects, FMCG, sustainability, alliances, M&A, loyalty programs, airport logistics, airline catering, corporate banking, investment banking',
   },
+  {
+    name: 'Remco Althuis',
+    role: 'Strategic Advisor',
+    image: remco.src,
+    bio: 'Remco is an experienced strategic advisor and aviation expert with over 25 years of leading and guiding organizations through transformation, growth, and operational challenges. He advises boards, investors, and executive teams on business resilience, efficiency, and long-term value creation across complex, regulated industries. Remco brings a global perspective and a collaborative leadership style, shaped by international experience across Europe, Asia, Africa, and the Middle East',
+  },
 ];
 ---
 
@@ -26,7 +33,7 @@ const team = [
       </h2>
       <div class='w-20 h-1 bg-gold-300 mx-auto'></div>
     </div>
-    <div class='grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto'>
+    <div class='grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto'>
       {
         team.map((member, index) => (
           <div
