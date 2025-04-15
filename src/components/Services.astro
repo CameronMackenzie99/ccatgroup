@@ -1,56 +1,44 @@
 ---
+import { Icon } from 'astro-icon/components';
 const services = [
   {
-    heading: 'Industry Knowledge',
-    content:
-      'Deep understanding of historical trends, markets, and regions in aviation. Real-time knowledge of asset capabilities and values.',
+    heading: 'Operational robustness',
+    icon: 'wrench',
+    content: [
+      'Crew planning, maintenance scheduling, engineering management',
+      'Security and safety, and crisis management',
+      'Strategic purchasing, reduced total operating costs',
+    ],
   },
   {
-    heading: 'Technical Proficiency',
-    content:
-      'In-depth understanding of aircraft platforms and maintenance practices. Comprehensive knowledge of parts, components, and MRO operations.',
+    heading: 'Revenues',
+    icon: 'receipt',
+    content: ['Passenger, ancillary, ACMI, cargo segments'],
   },
-
   {
-    heading: 'Strategic Relationships',
-    content:
-      'Strong connections with governments, airlines, OEMs, and financial institutions. Global marketing insights and substantial airline customer knowledge.',
+    heading: 'Profitability and liquidity',
+    icon: 'graph',
+    content: [
+      'Identify, prioritize and assist in implementing of profit improvement initiatives',
+      'Assist in securing 3rd party financing as debt or equity',
+    ],
   },
-
   {
-    heading: 'Turnaround and Restructuring',
-    content:
-      'Strategic, operational, and financial restructuring for airlines. Transformation support and transaction assistance for air transport businesses.',
+    heading: 'Regulatory compliance',
+    icon: 'scale',
+    content: [
+      'Risk assessment, EASA compliance, IOSA compliance, continuous improvement',
+      'Documentation implementation',
+    ],
   },
-
   {
-    heading: 'Comprehensive Solutions',
-    content:
-      'Total airline solutions offering scale and capabilities for self-sustainability. Services include strategy, governance, process improvement, revenue management, and fleet planning.',
-  },
-
-  {
-    heading: 'Regulatory Compliance',
-    content:
-      'Risk assessment, EASA and IOSA compliance, continuous improvement, and documentation implementation.',
-  },
-
-  {
-    heading: 'Operations Management',
-    content:
-      'Crew planning, maintenance scheduling, engineering management, security, safety, and crisis management services.',
-  },
-
-  {
-    heading: 'Procurement & Asset Management',
-    content:
-      'Strategic purchasing, reduced total cost of ownership, category management, and aircraft trading and leasing support.',
-  },
-
-  {
-    heading: 'Airport Services',
-    content:
-      'Strategic, operational, restructuring, and transformation support for airport owners, operators, regulators, and developers.',
+    heading: 'Strategy & governance',
+    icon: 'lightbulb',
+    content: [
+      'Process improvement',
+      'Culture change management',
+      'Fleet planning and management',
+    ],
   },
 ];
 ---
@@ -68,8 +56,15 @@ const services = [
         {
           services.map((service, index) => (
             <div class='flex w-full flex-col gap-6 md:gap-2 text-left'>
-              <h3 class='text-xl font-medium leading-12'>{service.heading}</h3>
-              <p class='text-sm leading-relaxed'>{service.content}</p>
+              <div class='flex gap-2 items-center'>
+                <Icon name={service.icon} class='text-gray-300 text-xl' />
+                <h3 class='text-xl font-medium leading-12'>
+                  {service.heading}
+                </h3>
+              </div>
+              {service.content.map((entry) => (
+                <li class='text-sm leading-relaxed list-inside'>{entry}</li>
+              ))}
             </div>
           ))
         }
