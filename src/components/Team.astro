@@ -10,7 +10,8 @@ const team = [
     image: tony.src,
     bio: [
       'Tony’s previous experience as a UK CAA Flight Operations inspector, DFO and COO, is invaluable. He is an expert in identifying potential safety and noncompliance issues.',
-      'He can identify inefficiencies throughout all functional areas of the flight operation and recommend appropriate changes including best practice processes and procedure changes as required. His track record is proven to save significant cost to an airline operation.',
+      'He can identify inefficiencies throughout all functional areas of the flight operation and recommend appropriate changes including best practice processes and procedure changes as required.',
+      'His track record is proven to save significant cost to an airline operation.',
     ],
   },
   {
@@ -52,21 +53,21 @@ const team = [
             style={`animation-delay: ${index * 100}ms`}
           >
             <div class='relative mb-8 transform group-hover:scale-105 transition-transform duration-300'>
-              <div class='absolute inset-0 bg-gradient-to-b from-transparent to-gold-500/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity' />
+              <div class='absolute inset-0 bg-gradient-to-b from-transparent to-gold-500/50 opacity-0 group-hover:opacity-100 transition-opacity' />
               <img
                 src={member.image}
                 alt={member.name}
-                class='w-full h-[250px] rounded-xl object-cover object-top shadow-xl'
+                class='w-full h-[250px] object-cover object-top shadow-xl'
               />
             </div>
-            <div class='text-center max-w-xl mx-auto'>
+            <div class='text-center max-w-xl mx-auto p-8 gap-2 bg-dark-900 shadow-sm shadow-gold-300 overflow-hidden'>
               <h3 class='text-3xl font-playfair text-gold-300 mb-2'>
                 {member.name}
               </h3>
               <p class='text-xl text-gray-400 font-medium mb-4'>
                 {member.role}
               </p>
-              <div class='flex flex-col text-left gap-2'>
+              <div class="flex flex-col gap-2 text-left">
                 {member.bio.map((para) => (
                   <p class='text-gray-300 text-lg leading-relaxed'>{para}</p>
                 ))}
