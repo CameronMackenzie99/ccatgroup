@@ -1,15 +1,15 @@
 ---
-import heroImage from '../assets/hero-airplane.avif';
+import heroImage from '../assets/hero-airplane-2.jpg';
 ---
 
 <section
-  class='min-h-screen flex items-center bg-dark pt-8 overflow-hidden'
+  class='h-[90vh] md:h-[80vh] pt-16 md:pt-24 bg-dark overflow-hidden text-center'
 >
   <div class='absolute inset-0'>
     <img
       src={heroImage.src}
       alt='Airplane at sunset'
-      class='w-full h-full object-cover opacity-20'
+      class='object-[40%_60%] h-full object-cover opacity-50'
     />
   </div>
   <div class='container mx-auto px-4 relative'>
@@ -18,41 +18,54 @@ import heroImage from '../assets/hero-airplane.avif';
         <h1 class='text-gold-300 font-playfair text-5xl md:text-7xl mb-6'>
           CCAT Group Ltd.
         </h1>
-        <p class='text-2xl md:text-3xl text-gray-300 mb-4'>
+        <p class='text-2xl md:text-3xl text-gray-100 mb-4'>
           Some advisors maintain. Others disrupt.
         </p>
         <p class='text-4xl md:text-5xl text-gold-300 font-playfair mb-12'>
           We transform.
         </p>
-        <div class='space-y-4 text-lg text-gray-300 leading-relaxed bg-gold-200/5 p-8 w-fit'>
-          <p>
-            Tailor-made solutions for airlines facing unprecedented industry
-            challenges
+        <div
+          class='space-y-4 text-lg text-gray-300 leading-relaxed bg-gold-200/5 p-8 w-fit mx-auto mb-4'
+        >
+          <p class='text-2xl text-gray-100'>
+            CCAT is a boutique aviation focused consulting firm.
           </p>
-          <p>Decades of multinational experience across four continents</p>
-          <p>Global leadership at CEO, CFO, COO and Board levels</p>
-          <p>Offices in Harrogate (UK), Dubai (UAE) and Tallinn (Estonia)</p>
-        </div>
-        <div class='mt-12'>
-          <a
-            href='#contact'
-            class='inline-flex items-center px-8 py-4 border-2 border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-dark transition-all duration-300 text-lg font-semibold'
-          >
-            Connect With Us
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              class='h-5 w-5 ml-2'
-              viewBox='0 0 20 20'
-              fill='currentColor'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                clip-rule='evenodd'></path>
-            </svg>
-          </a>
+          <p class='text-2xl text-gray-100 mb-4'>
+            We know how to complete a turnaround in this industry.
+          </p>
         </div>
       </div>
+      <div class='mb-12'>
+        <a
+          href='#contact'
+          class='inline-flex items-center px-8 py-4 border-2 border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-dark transition-all duration-300 text-lg font-semibold'
+        >
+          Connect With Us
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='h-5 w-5 ml-2'
+            viewBox='0 0 20 20'
+            fill='currentColor'
+          >
+            <path
+              fill-rule='evenodd'
+              d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+              clip-rule='evenodd'></path>
+          </svg>
+        </a>
+      </div>
+      <!-- <div
+          class='space-y-4 text-2xl text-gray-100 leading-relaxed bg-gold-200/5 p-8 w-fit'
+        >
+          <p>
+            Tailor-made solutions for airlines facing unprecedented industry
+            challenges.
+          </p>
+          <p>
+            CCAT is a boutique aviation focused consulting firm. We know how to
+            complete a turnaround in this industry.
+          </p>
+        </div> -->
     </div>
   </div>
 </section>
