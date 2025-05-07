@@ -25,6 +25,7 @@ const approaches = [
     ],
   },
 ];
+const marginSteps = ["md:top-12", "md:top-8", "md:top-4", "md:top-0"]
 ---
 
 <section id='approach' class='relative py-16 bg-dark-900'>
@@ -36,11 +37,11 @@ const approaches = [
       <p class='text-gray-400 text-lg mb-12'>
         We work closely with our clients throughout the journey
       </p>
-      <div class='grid grid-cols-1 md:grid-cols-2 text-gray-300 gap-16'>
+      <div class='grid grid-cols-1 md:grid-cols-4 text-gray-300 gap-16'>
         {
           approaches.map((approach, index) => (
-            <div class='flex w-full flex-col text-left shadow-sm bg-dark-800 shadow-gold-300 overflow-hidden'>
-              <div class='flex gap-2 items-center px-8 py-4 bg-dark-800/5'>
+            <div class={`flex w-full flex-col text-left shadow-sm bg-dark-800 shadow-gold-300 overflow-hidden relative ${marginSteps[index]}`}>
+              <div class='flex gap-2 items-center px-8 py-4 bg-dark-800/5 mt-0'>
                 <h3 class='text-xl text-gold-300 font-semibold'>
                   {approach.heading}
                 </h3>
