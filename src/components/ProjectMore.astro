@@ -1,0 +1,98 @@
+---
+import { Icon } from 'astro-icon/components';
+import hangar from '../assets/hangar.png'
+const services = [
+  {
+    heading: 'Operational robustness',
+    icon: 'wrench',
+    content: [
+      'Crew planning, maintenance scheduling, engineering management',
+      'Security and safety, and crisis management',
+      'Strategic purchasing, reduced total operating costs',
+    ],
+  },
+  // {
+  //   heading: 'Revenues',
+  //   icon: 'receipt',
+  //   content: ['Passenger, ancillary, ACMI, cargo segments'],
+  // },
+  {
+    heading: 'Profitability and liquidity',
+    icon: 'graph',
+    content: [
+      'Identify, prioritize and assist in implementing of profit improvement initiatives',
+      'Assist in securing 3rd party financing as debt or equity',
+    ],
+  },
+  {
+    heading: 'Regulatory compliance',
+    icon: 'scale',
+    content: [
+      'Risk assessment, EASA compliance, IOSA compliance, continuous improvement',
+      'Documentation implementation',
+    ],
+  },
+  {
+    heading: 'Strategy & governance',
+    icon: 'lightbulb',
+    content: [
+      'Process improvement',
+      'Culture change management',
+      'Fleet planning and management',
+    ],
+  },
+];
+---
+
+<section id='more' class='relative py-16 bg-dark-900'>
+  <div class='container mx-auto px-4'>
+    <div class='max-w-6xl mx-auto text-center animate-fade-in'>
+      <h2 class='text-4xl font-playfair text-gold-300 mb-6'>
+        Project MORE
+      </h2>
+       <p class='text-gray-400 text-lg mb-12'>
+        Maintenance Operational Robustness & Efficiencies
+      </p>
+      <div class="flex flex-col md:flex-row">
+        <div
+          class='space-y-8 text-xl text-gray-300 text-left leading-relaxed bg-gold-200/5 p-8'
+        >
+          <p>
+            Project “MORE” aims to transform maintenance operations so that they are better aligned with the following strategic objectives:
+          </p>
+          <ol class="list-decimal list-inside">
+            <li class="list-item">increasing technical dispatch reliability</li>
+            <li class="list-item">reducing costs and increasing profitability</li>
+          </ol>
+          <p>The proposed project objectives include:</p>
+          <ul class="list-disc list-inside">
+              <li>increasing technical dispatch reliability</li>
+              <li>decreasing maintenance-related AOG (aircraft-on-ground) days</li>
+              <li>improving efficiency in maintenance activities</li>
+              <li>reducing maintenance costs</li>
+              <li>creating revenue-generating opportunities through third-party maintenance services</li>
+          </ul>
+        </div>
+        
+      <img src={hangar.src} alt="aircraft hangar" class="object-cover h-full">
+      </div>
+
+      <div class='mt-12'>
+        <p class='text-gray-300 text-2xl my-12'>
+          Why “MORE”?
+        </p>
+        <p class="text-lg text-gray-300 text-left leading-relaxed">
+          The aircraft are the 2nd most important asset of an airline, second only to its people.
+          Among the many justifications for the MORE project to be implemented, ranging from brand reputation to profitability and liquidity, we will focus here only on the goal to reduce AOGs (aircraft-on-ground) beyond normal maintenance schedule.
+        </p>
+      </div>
+      <div class="flex flex-col gap-8 mt-8">
+        <div class="flex flex-col gap-8 md:flex-row md:justify-around">
+          <p><b class="text-2xl">ca. 50% </b><br>Of AOGs are caused by technical Issues</p>
+          <p><b class="text-2xl">€ +100,000</b><br>Cost per grounded aircraft per day <br> (estimated)</p>
+        </div>
+        <div><p>Each year, airlines likely face <br><b class="text-2xl">hundreds or thousands</b><br>of AOG–days</p></div>
+      </div>
+    </div>
+  </div>
+</section>
