@@ -1,0 +1,91 @@
+---
+import { Icon } from 'astro-icon/components';
+const services = [
+  {
+    heading: 'Operational robustness',
+    icon: 'wrench',
+    content: [
+      'Crew planning, maintenance scheduling, engineering management',
+      'Security and safety, and crisis management',
+      'Strategic purchasing, reduced total operating costs',
+    ],
+  },
+  // {
+  //   heading: 'Revenues',
+  //   icon: 'receipt',
+  //   content: ['Passenger, ancillary, ACMI, cargo segments'],
+  // },
+  {
+    heading: 'Profitability and liquidity',
+    icon: 'graph',
+    content: [
+      'Identify, prioritize and assist in implementing of profit improvement initiatives',
+      'Assist in securing 3rd party financing as debt or equity',
+    ],
+  },
+  {
+    heading: 'Regulatory compliance',
+    icon: 'scale',
+    content: [
+      'Risk assessment, EASA compliance, IOSA compliance, continuous improvement',
+      'Documentation implementation',
+    ],
+  },
+  {
+    heading: 'Strategy & governance',
+    icon: 'lightbulb',
+    content: [
+      'Process improvement',
+      'Culture change management',
+      'Fleet planning and management',
+    ],
+  },
+];
+---
+
+<section id='services' class='relative py-16 bg-dark-900'>
+  <div class='container mx-auto px-4'>
+    <div class='max-w-6xl mx-auto text-center animate-fade-in'>
+      <h2 class='text-4xl font-playfair text-gold-300 mb-6'>
+        Comprehensive Aviation Services
+      </h2>
+      <div
+        class='space-y-4 text-lg text-gray-300 leading-relaxed bg-gold-200/5 p-8 w-fit'
+      >
+        <p>
+          Tailor-made solutions for airlines facing unprecedented industry
+          challenges
+        </p>
+        <p>
+          We have decades of multinational experience across four continents,
+          including global leadership at CEO, CFO, COO and Board levels
+        </p>
+        <p>Offices in Harrogate (UK), Dubai (UAE) and Leiden (Netherlands)</p>
+      </div>
+      <div class='mt-12'>
+        <p class='text-gray-300 text-xl mb-12'>
+          We specialise in the following services:
+        </p>
+        <div class='grid grid-cols-1 md:grid-cols-2 text-gray-300 gap-16'>
+          {
+            services.map((service, index) => (
+              <div class='flex w-full flex-col text-left shadow-sm bg-dark-800 shadow-gold-300 overflow-hidden'>
+                <div class='flex gap-2 items-center px-8 py-4 bg-dark-800/5'>
+                  <Icon name={service.icon} class='text-gray-300 text-2xl' />
+                  <h3 class='text-xl text-gold-300 font-semibold'>
+                    {service.heading}
+                  </h3>
+                </div>
+                <div class='px-8 pb-4 bg-dark-800 h-full'>
+                  {service.content.map((entry) => (
+                    <li class='text-md leading-relaxed list-inside'>{entry}</li>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

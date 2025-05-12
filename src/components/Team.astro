@@ -1,0 +1,81 @@
+---
+import tony from '../assets/tony.jpg';
+import gabriel from '../assets/gabriel.jpg';
+import remco from '../assets/remco.jpg';
+
+const team = [
+  {
+    name: 'Tony Mackenzie',
+    role: 'Operations & Compliance',
+    image: tony.src,
+    bio: [
+      'Tony’s previous experience as a UK CAA Flight Operations inspector, DFO and COO, is invaluable. He is an expert in identifying potential safety and noncompliance issues.',
+      'He can identify inefficiencies throughout all functional areas of the flight operation and recommend appropriate changes including best practice processes and procedure changes as required.',
+      'His track record is proven to save significant cost to an airline operation.',
+    ],
+  },
+  {
+    name: 'Gabriel Rusu',
+    role: 'Strategy & Finance',
+    image: gabriel.src,
+    bio: [
+      'Gabriel takes a leading role in solving financial issues through operational improvements. He drives cultural change.',
+      'He maintains the team’s focus on increased financial liquidity and profitability implementing incremental efficiencies and better commercial contracts.',
+      'Throughout his career he has significantly improved inter departmental communication and cooperation.',
+    ],
+  },
+  {
+    name: 'Remco Althuis',
+    role: 'Strategic Advisor',
+    image: remco.src,
+    bio: [
+      'Remco is an experienced strategic advisor and aviation expert with over 25 years of leading and guiding organizations through transformation, growth, and operational challenges.',
+      'He advises boards, investors, and executive teams on business resilience, efficiency, and long-term value creation across complex, regulated industries.',
+      'Remco brings a global perspective and a collaborative leadership style, shaped by international experience across Europe, Asia, Africa, and the Middle East',
+    ],
+  },
+];
+---
+
+<section id='team' class='py-16 bg-dark-800'>
+  <div class='container mx-auto px-4'>
+    <div class='text-center mb-16 animate-fade-in'>
+      <h2 class='text-4xl font-playfair text-gold-300 mb-4'>
+        Meet CCAT Senior Partners
+      </h2>
+      <div class='w-20 h-1 bg-gold-300 mx-auto'></div>
+    </div>
+    <div class='grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto'>
+      {
+        team.map((member, index) => (
+          <div
+            class='group animate-slide-up'
+            style={`animation-delay: ${index * 100}ms`}
+          >
+            <div class='relative mb-8 transform group-hover:scale-105 transition-transform duration-300'>
+              <div class='absolute inset-0 bg-gradient-to-b from-transparent to-gold-500/50 opacity-0 group-hover:opacity-100 transition-opacity' />
+              <img
+                src={member.image}
+                alt={member.name}
+                class='aspect-square md:w-full object-cover object-top shadow-xl'
+              />
+            </div>
+            <div class='text-center max-w-xl mx-auto p-8 gap-2 bg-dark-900 shadow-sm shadow-gold-300 overflow-hidden'>
+              <h3 class='text-3xl font-playfair text-gold-300 mb-2'>
+                {member.name}
+              </h3>
+              <p class='text-xl text-gray-400 font-medium mb-4'>
+                {member.role}
+              </p>
+              <div class='flex flex-col gap-2 text-left'>
+                {member.bio.map((para) => (
+                  <p class='text-gray-300 text-lg leading-relaxed'>{para}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
